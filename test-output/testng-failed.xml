@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestAssate.Auuthorization">
+      <class name="RestAssate.DataDriven_Test">
         <methods>
-          <include name="actitime"/>
+          <include name="PostMethod"/>
         </methods>
-      </class> <!-- RestAssate.Auuthorization -->
+      </class> <!-- RestAssate.DataDriven_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

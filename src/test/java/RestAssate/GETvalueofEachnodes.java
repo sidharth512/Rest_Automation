@@ -10,6 +10,8 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
+import net.bytebuddy.implementation.bytecode.assign.Assigner.EqualTypesOnly;
+import static org.hamcrest.Matchers.*;
 
 public class GETvalueofEachnodes {
 	@Test
@@ -24,7 +26,8 @@ public class GETvalueofEachnodes {
 		//System.out.println(body);
 		JsonPath jsonpath=responds.jsonPath();
 	Object	info=jsonpath.get("data");
-	System.out.println(info);
+	//System.out.println(info);
+	responds.then().statusCode(200).body("data.id[0]", equalTo(7));
 	Headers head =responds.getHeaders();
 	for(Header allheader:head) {
 		System.out.println(allheader.getValue());

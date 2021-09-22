@@ -17,7 +17,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class Auuthorization {
 	public void actitime() {
-		RestAssured.baseURI="https://demo.actitime.com";
+		RestAssured.baseURI="https://reqres.in";
 		PreemptiveBasicAuthScheme authscheme=new PreemptiveBasicAuthScheme() ;
 		authscheme.setUserName("admin");
 		authscheme.setPassword("manager");
